@@ -27,7 +27,7 @@ jobs:
       - name: Export LeetCode solutions
         run: |
           mkdir -p leetcode_solutions
-          leetcode-export --cookies leetcode-user.json --folder leetcode_solutions
+          leetcode-export --cookies "${{ secrets.LEETCODE_COOKIES }}" --folder leetcode_solutions
 
       - name: Commit and push changes
         run: |
