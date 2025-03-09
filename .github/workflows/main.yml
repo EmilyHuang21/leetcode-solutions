@@ -35,4 +35,4 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git add .
           git commit -m "Auto-sync LeetCode solutions" || echo "No changes to commit"
-          git push origin main
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git main
